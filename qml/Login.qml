@@ -54,7 +54,7 @@ Rectangle{
 
         BasicButton{
             anchors.right: parent.right
-            enabled: app.connected
+            enabled: app.connected && inputLogin.text != "" && inputPassword.text != ""
             text: app.newUser ? "Create" : "Login"
 
             onClicked: {
